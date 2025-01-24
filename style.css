@@ -498,13 +498,19 @@ nav {
     align-items: flex-start;
     display: flex;
     gap: 1rem;
+    overflow: visible;
+    position: relative;
 }
 
 .review-member img {
-    border-radius: 50%;
-    max-width: 120px;
-    margin: 0 auto;
+    border-radius: 50%; /* Circular image */
+    display: block; /* Prevent inline behavior */
+    max-width: 120px; /* Limit image size */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Ensure proper cropping if the image is not square */
+    width: 100%; /* Ensure the image scales properly */
 }
+
 
 .review-member-details {
     color: var(--white);
