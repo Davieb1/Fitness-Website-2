@@ -607,7 +607,7 @@ nav {
     }
 
     .explore-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
 
@@ -620,16 +620,13 @@ nav {
     }
 
     .price-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
+        padding: 0 1rem;
     }
 
     .class-container {
-        grid-template-columns: repeat(1,1fr);
-    }
-
-    .price-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .review-container {
