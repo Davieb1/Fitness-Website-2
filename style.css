@@ -10,12 +10,13 @@
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -606,9 +607,18 @@ nav {
         grid-area: 1/1/2/2;
     }
 
-    .explore-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+
+    .explore-grid, .price-grid {
+        grid-template-columns: 1fr; /* One column per row */
+        gap: 1.5rem; /* Adjust spacing between items */
+        margin: 0 auto; /* Center the grid */
+        padding: 0 1rem; /* Prevent content from overflowing the screen */
+        width: 100%; /* Ensure the grid spans the full width of the container */
+        max-width: var(--max-width); /* Respect the container's max width */
+    }
+
+    .explore-card, .price-card {
+        margin: 0 auto; /* Center individual cards */
     }
 
     .class-container {
@@ -617,12 +627,6 @@ nav {
 
     .class-image {
         display: none;
-    }
-
-    .price-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-        padding: 0 1rem;
     }
 
     .class-container {
